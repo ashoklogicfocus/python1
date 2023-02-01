@@ -33,6 +33,25 @@ jobs:
       run: |
         python sample.py
         
+        
+jobs:
+  unit test:
+  
+      needs: long-running-test-dependency
+      
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: |
+          cd $GITHUB_WORKSPACE
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Run Tests    
+      - name: unit test
+        run: python sample.py
+        
+        
       
  
       
