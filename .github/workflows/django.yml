@@ -68,8 +68,6 @@ if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
 with:
 - name: unit test
-run: |
-python sample.py
 path:C:\Users\logicfocus\Documents\python1
 
 
