@@ -30,12 +30,14 @@ jobs:
       run: |
         python sample.py
         
+        
+        
+        
    
+   name: unit test
    
-   
-unit-test:
-
     needs: [build]
+    
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the code
