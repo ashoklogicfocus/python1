@@ -30,14 +30,16 @@ jobs:
       run: |
         python sample.py
         
+   
+   
+   
+   needs: [build]
+   
+        
 
+ name: python package
+ 
 
-needs: [build]
-on:
- push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
 
   release:
     types: [published]
