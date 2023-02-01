@@ -33,8 +33,7 @@ jobs:
         
         
         
-   
-   name: unit test
+    unit test
    
     needs: [build]
     
