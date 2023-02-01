@@ -32,6 +32,19 @@ jobs:
         python sample.py
         
         
+        
+name: Python application
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+permissions:
+  contents: read       
+        
+        
 jobs:
 
   unit test:
