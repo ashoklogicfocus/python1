@@ -33,34 +33,41 @@ jobs:
         
         
         
-name: Python application
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+# GitHub recommends pinning actions to a commit SHA.
+# To get a newer version, you will need to update the SHA.
+# You can also reference a tag or branch, but the action may change without warning.
+
+name: Upload Python Package
 
 on:
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+  release:
+    types: [published]
 
-permissions:
-  contents: read       
-        
 jobs:
-
-  unit test:
-     needs: long-running-test-dependency
-      
-    runs-on: windows-latest
-    
+  deploy:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
       - name: Install dependencies
         run: |
-          cd $GITHUB_WORKSPACE
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
-      - name: Run Tests    
-      - name: unit test
-        run: python sample.py
+          pip install build
+      - name: Build package
+        run: python -m build
+      - name: Publish package
+        uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29
+        with:
+          user: __token__
+          password: ${{ secrets.PYPI_API_TOKEN }}
         
         
       
