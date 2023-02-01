@@ -34,6 +34,9 @@ jobs:
 
 
 
+on:
+
+needs: [build]
 
   push:
     branches: [ "master" ]
@@ -60,7 +63,7 @@ jobs:
       - name: Build package
         run: python -m build
       - name: Publish package
-        uses: pypa/gh-action-pypi-publish@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
+        uses: pypa/gh-action-pypi-publish
         
         
         
