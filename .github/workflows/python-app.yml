@@ -34,18 +34,4 @@ jobs:
       run: |
         python sample.py
         
-        
-        
-        
-        - name: Python Unit Test
-        
-  uses: onichandame/python-test-action@0.0.0
-  with:
-
-    deps_list: # default is requirements.txt
-
-    path:C:\Users\logicfocus\Documents\python1
-
-    test_dir: # default is .
-    # pattern of the test script name
-    pattern: python sample.py
+      
