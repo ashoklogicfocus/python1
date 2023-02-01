@@ -31,10 +31,7 @@ jobs:
       run: |
         python sample.py
         
-        
- 
 
-name: Python Package
 
 on:
   release:
