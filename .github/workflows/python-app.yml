@@ -58,7 +58,7 @@ jobs:
           python -m pip install --upgrade pip
          
     
-      - name: Test with unittest
+      - name: unittest
         run: |
           python sample.py
 
