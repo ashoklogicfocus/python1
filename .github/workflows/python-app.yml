@@ -65,7 +65,7 @@ jobs:
 
     - name: package
       run: |
-          python sample.py
+          python package
 
 
         
