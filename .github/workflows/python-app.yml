@@ -33,7 +33,8 @@ jobs:
         
         
         
-name: Test
+name: unit test
+
 on: [push]
 jobs:
   test:
