@@ -27,9 +27,10 @@ jobs:
     - name: Test 
       run: |
         python sample.py
-        needs: [build]
+       
   unittest:
     runs-on: windows-latest
+     needs: [build]
     strategy:
      matrix:
       python-version: ["3.10", "3.11"]
