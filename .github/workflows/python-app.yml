@@ -33,24 +33,20 @@ jobs:
         
         
         
-unit test: 
-   
-    needs: [build]
-    
+name: Test
+on: [push]
+jobs:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout the code
-        uses: actions/checkout@v3
-
-      - name: Run tests
-        run: ./python test
-
-      - name: Upload test report
-        uses: actions/upload-artifact@v3
+      - uses: actions/checkout@master
+      - uses: actions/setup-python@v3
         with:
-          name: unit_test_report
-          path: Users\logicfocus\Documents\python1
-        
+          python-version: '3.10'
+      - name: Test
+        uses: onichandame/python-test-action@master
+        with:
+          deps_list: 'requirement'
       
  
       
