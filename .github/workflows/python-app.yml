@@ -36,24 +36,25 @@ jobs:
 
 
  
-  Unit Test:
+  unittest:
+   needs: [build]
+   runs-on: ubuntu-latest
+   steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
+    - name: Install dependencies
+      run: |
+        pip install -e '.[unittest]'
 
-needs: [build]
-runs-on: ubuntu-latest
-      
-steps:
-      - uses: actions/checkout@v3
-      - name: Set up Python 3.10
-        uses: actions/setup-python@v3
-
-with:
-        python: [3.10]
-        path: \Users\logicfocus\Documents\python1
-        
-        - name: unittest
+    - name: Test with unittest
+      run: |
      
-     run: |
-     pattern: python sample.py
+       python sample.pyr
+      
+
 
 
 
