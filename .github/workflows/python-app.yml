@@ -33,16 +33,8 @@ jobs:
         
         
         
-name: python application        
+  
         
-on:
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
-
-permissions:
-  contents: read      
 
 unit test: 
    
