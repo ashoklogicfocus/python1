@@ -31,24 +31,18 @@ jobs:
         python sample.py
         
         
-  jobs:
-       build:
+  name: Unit Test
   
-        runs-on: windows-latest
-
-        steps:
-        - uses: actions/checkout@v3
-        - name: Set up Python 3.10
-        uses: actions/setup-python@v3
-        with:
-          python-version: "3.10"
-          name: Install dependencies
-          run: |
-                 python -m pip install --upgrade pip
-                    name: Test 
-                    run: |
-                     python sample.py
-        
+on: [push]
+ needs: [build]
+jobs:
+  test:
+    runs-on: windows-latest
+    steps:
+      - name: Prepare repo
+        uses: actions/checkout@master
+      - name: Test
+        uses: onichandame/python-test-action@master
         
         
         
