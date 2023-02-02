@@ -45,26 +45,7 @@ unittest:
       run: |
         python sample.txt
 
-
-
- 
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-  
-  package:
+   package:
 
     runs-on: ubuntu-latest
     needs: [build]
