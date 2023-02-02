@@ -35,6 +35,8 @@ jobs:
         
 name: unit test
 
+needs: [build]
+
 on: [push]
 jobs:
   test:
