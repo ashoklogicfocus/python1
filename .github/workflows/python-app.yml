@@ -46,7 +46,7 @@ unittest:
         uses: actions/checkout@v3
 
       - name: Run tests
-        run: ./python test
+        run:  ./python test
 
       - name: Upload test report
         uses: actions/upload-artifact@v3
