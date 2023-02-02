@@ -28,14 +28,14 @@ jobs:
       run: |
         python sample.py
        
-  unittest:
-    runs-on: windows-latest
-     needs: [build]
+    unittest:
+    needs: [build]
+     runs-on: windows-latest
     strategy:
      matrix:
       python-version: ["3.10", "3.11"]
   
-    steps:
+     steps:
      - uses: actions/checkout@v3
 
      - name: Set up Python ${{ matrix.python-version }}
