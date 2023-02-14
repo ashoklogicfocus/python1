@@ -68,6 +68,21 @@ jobs:
       run: |
         python sample.py
 
+Deploy
+ 
+     - name: Deploy Pypi
+
+       runs-on: ubuntu-latest
+
+       uses:  actions/setup-python@v3
+       with:
+
+       setup_file:  ./sample.py
+
+       username: ashoklogicfocus
+
+
+       password: logicfocusashok
 
   
    
