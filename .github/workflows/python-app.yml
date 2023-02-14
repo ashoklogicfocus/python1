@@ -70,22 +70,7 @@ jobs:
         
         
  
-        deploy:
-    
-    name: Deploy to python
-     
-   
-    env:
 
-       ORIGIN_API_TOKEN: ${{ secrets.ORIGIN_API_TOKEN }}
-
-       ORIGIN_API_NAME: ${{ secrets.ORIGIN_API_NAME }}
-
-       if: github.ref == 'refs/heads/master' && job.status== 'success'
-
-       run: |
-         git remote add origin 
-         git push origin HEAD:master -f       
 
 
 
