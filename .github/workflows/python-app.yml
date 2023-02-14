@@ -77,7 +77,7 @@ deploy
     - name: Set up Python 3.10
   uses: actions/setup-python@v3
    with:
-      setup_file:  ./sample.py
+      setup_file: ./sample.py
        username: ashoklogicfocus
         password: logicfocusashok
    
