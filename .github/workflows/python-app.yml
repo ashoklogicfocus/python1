@@ -73,27 +73,7 @@ jobs:
 
 
 
-  deploy:
-    runs-on: ubuntu-latest
-    needs: [package]
 
-    steps:
-    
-      - uses: actions/checkout@v3
-      - name: Set up Python 3.10
-        uses: actions/setup-python@v3
-
-      - name: run
-        run: sample.py
-
-
-      - name: deploy
-        run: |
- 
-          echo test, and deploy your project.
-
-        
-        
  
 
 
