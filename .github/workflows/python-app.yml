@@ -69,6 +69,25 @@ jobs:
         python sample.py
         
         
+        
+      
+      
+      
+Deployment
+
+jobs:
+needs: [ package ]
+    deployment:
+      runs-on: ubuntu-latest
+      environment: 
+        name: production
+        url: https://github.com
+      steps:
+        - name: deploy
+        run: |
+        python sample.py
+
+        
  
 
 
