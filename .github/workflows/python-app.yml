@@ -72,45 +72,7 @@ jobs:
         
 
 
-  deploy:
-
-    needs: [ package ]
-
-    runs-on: ubuntu-latest
-
-
-    steps:
-      - uses: actions/checkout@v3
-      - name: set up python 3.10
-        uses: actions/setup-python@v3
-        with:
-          python-version: "3.10"
-      - name: Install dependencies
-        run: npm install
-      - name: Build page
-        run: npm run build
-      - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v3
-
-
-
-
  
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
 
 
 
