@@ -68,17 +68,14 @@ jobs:
       run: |
         python sample.py
         
- 
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  deployment:
     runs-on: ubuntu-latest
-    needs: build
+    environment: production
+    concurrency: production
     steps:
-      - name: Deploy to GitHub package
-        id: deployment
-        uses: actions/deploy-pages@v1
+      - name: deploy
+        run: |
+           python sample.py
         
         
         
