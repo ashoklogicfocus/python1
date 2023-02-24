@@ -68,14 +68,7 @@ jobs:
       run: |
         python sample.py
         
-  deployment:
-    runs-on: ubuntu-latest
-    environment: production
-    concurrency: production
-    steps:
-      - name: deploy
-        run: |
-           python sample.py
+
         
         
         
