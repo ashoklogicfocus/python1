@@ -12,7 +12,7 @@ permissions:
 jobs:
   build:
 
-    runs-on: label-2
+    runs-on: self-hosted
               
 
     steps:
