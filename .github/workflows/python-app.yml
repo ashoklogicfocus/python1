@@ -12,7 +12,7 @@ permissions:
 jobs:
   build:
 
-    runs-on: Windows
+    runs-on: self-hosted
               
 
     steps:
