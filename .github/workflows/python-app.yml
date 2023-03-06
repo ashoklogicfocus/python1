@@ -12,7 +12,7 @@ permissions:
 jobs:
   build:
 
-    runs-on: lable-1 
+    runs-on: label-2
               
 
     steps:
