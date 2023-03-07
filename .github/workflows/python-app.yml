@@ -15,7 +15,7 @@ jobs:
    runs-on: 
   
      group: ent/Default
-     labels: self-hosted, label-8 
+     labels: self-hosted
 
 
    steps:
