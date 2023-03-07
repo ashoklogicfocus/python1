@@ -11,9 +11,14 @@ permissions:
 
 jobs:
   build:
+   
+   runs-on:
+  
+    group: ent/Default
+    labels: [ self-hosted, label-8 ] 
 
-    runs-on: self-hosted
-    steps:
+
+   steps:
     - uses: actions/checkout@v3
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
