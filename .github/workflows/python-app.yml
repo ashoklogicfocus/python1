@@ -12,7 +12,7 @@ permissions:
 jobs:
   build:
 
-    runs-on: self-hosted
+    runs-on: lable-8
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python 3.10
