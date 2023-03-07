@@ -12,10 +12,10 @@ permissions:
 jobs:
   build:
    
-   runs-on:
+   runs-on: 
   
-    group: ent/Default
-    labels: [ self-hosted, label-8 ] 
+     group: ent/Default
+     labels: self-hosted, label-8 
 
 
    steps:
