@@ -46,8 +46,7 @@ jobs:
         
 
   package:
-
-    runs-on: self-hosted
+    runs-on: self-hosted 
     needs: [unittest]
     strategy:
       fail-fast: false
