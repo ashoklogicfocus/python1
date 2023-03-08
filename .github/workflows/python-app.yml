@@ -13,8 +13,7 @@ jobs:
   build:
    
    runs-on: self-hosted
-   env:
-          PROJECT_ID: ${{ env.TOKEN_SECRETS }}
+
           
    steps:
     - uses: actions/checkout@v3
